@@ -21,6 +21,9 @@ gsettings set org.gnome.desktop.input-sources xkb-options ['altwin:ctrl_win', 'c
 # Add more python code here to setup the auto copy selection feature in terminal to match OSX behavior
 # file autocopy.py
 # Add logic in .bashrc
+# If gnome terminal has the focus python will run autocutsel
+# else the script will copy the contents from autocutsel clipboard, kill autocutsel then place the data back into the clipboard
+# Apparently the clipboard wipes itself out once autocutsel is killed, so python has to grab it first to put it back in
 #
 # if pgrep -f "python /home/{user}/autocopy.py" &>/dev/null; then
 #     :
