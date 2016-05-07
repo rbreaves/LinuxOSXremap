@@ -7,7 +7,7 @@
 gsettings set org.gnome.desktop.input-sources xkb-options ['altwin:ctrl_win', 'ctrl:swap_lalt_lctl_lwin']
 
 # Reset the termination shortcut from Ctrl-C to Ctrl-X, Ctrl-C cannot be mapped to from the Super (Win) key
-# When we add keyboard shortcuts Super-C will effective be Ctrl-C on your physical keyboard
+# When we add keyboard shortcuts Super-C will effectively be Ctrl-C on your physical keyboard
 # Add logic for checking for remap in .bashrc
 # then add this if missing
 #
