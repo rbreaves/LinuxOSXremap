@@ -21,8 +21,8 @@ gsettings set org.gnome.desktop.input-sources xkb-options ['altwin:ctrl_win', 'c
 # file autocopy.py
 # Add logic in .bashrc
 #
-# if pgrep -f "python /home/ryanr/Documents/focus" &>/dev/null; then
+# if pgrep -f "python /home/{user}/autocopy.py" &>/dev/null; then
 #     :
 # else
-#     nohup python ~/Documents/focus.py &> nohup.out &
+#     nohup python ~/autocopy.py &> nohup.out &
 # fi
