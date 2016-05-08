@@ -5,10 +5,10 @@
 Programmers should be focused on programming, not slowed down by superficial differences in an OS.
 
 ## Requirements
-Ubuntu 16.04?
-python2
-python3
-autocutsel (this will auto install)
+* Ubuntu 16.04?
+* python2
+* python3
+* autocutsel (this will auto install)
 
 ## Features
 * OSX/Lisp style keymaps
