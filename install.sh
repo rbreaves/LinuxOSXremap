@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if ! which autocutsel > /dev/null; then
+   echo -e "Autocutsel not found! Install? (y/n) \c"
+   read
+   if "$REPLY" = "y"; then
+      sudo apt-get install autocutsel -y
+   fi
+fi
+
 # For Ubuntu only
 # Tested only on 16.04
 
