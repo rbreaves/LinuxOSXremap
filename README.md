@@ -21,8 +21,6 @@ Remapping Linux, specifically just Ubuntu 16.04 for right now, to use OSX or Lis
 
 This script requires python2 and python3. I have only tested this with Ubuntu 16.04 LTS.
 
-Note: Currently I am not checking if the keyboard shortcuts have already been populated, if you run this script multiple times you could end up with multiple shortcuts. Please open the Keyboard settings -> Shortcuts (tab) -> Custom Shortcuts to remove any duplicates until I resolve this.
-
 ## Planned features
 
 Currently there are no other planned features. Some more testing needs to be done to make this script compatiable with other versions of ubuntu and/or compatiable with any DE, not just gnome. There are issues with using xkbcomp or xmodmap to accomplish the remap, so any requests to use either will be denied. If I use any method at all, that is more compatiable with any distro, it will be a modification to the x11org.conf file because it would not require 2 or more additional files and modifications to try and load and maintain it during a user session. There is a real bug that prevents the ability of keeping an xmodmap or xkbcomp in memory across a suspend, but only on the first login when using Ubuntu 16.04 and I am not sure how many other versions and distros that may affect
