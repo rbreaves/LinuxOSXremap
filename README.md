@@ -13,7 +13,7 @@ Programmers should be focused on programming, not slowed down by superficial dif
 ## Features
 * OSX/Lisp style keymaps
 * OSX shortcuts for screenshot, while also retaining Ctrl-C termination behavior in bash
-* OSX like auto copy selected content in gnome-terminal
+* OSX like auto copy for selected content in gnome-terminal
 
 ## Description
 
