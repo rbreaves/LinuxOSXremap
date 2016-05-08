@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# For Ubuntu only
+# Tested only on 16.04
+
+bashrc=/home/`whoami`/.bashrc
+newbashrc=./.bashrc
+
+# Install autocutsel if the package is not found
 if ! which autocutsel > /dev/null; then
    echo -e "Autocutsel not found! Install? (y/n) \c"
    read
@@ -7,12 +14,6 @@ if ! which autocutsel > /dev/null; then
       sudo apt-get install autocutsel -y
    fi
 fi
-
-# For Ubuntu only
-# Tested only on 16.04
-
-bashrc=/home/`whoami`/.bashrc
-newbashrc=./.bashrc
 
 #Swapping Alt, Win and Ctrl keys to align with OSX - but the Ctrl key will act as the Super (Win) key
 gsettings set org.gnome.desktop.input-sources xkb-options "['altwin:ctrl_win', 'ctrl:swap_lalt_lctl_lwin']"
