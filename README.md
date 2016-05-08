@@ -11,7 +11,7 @@ Programmers should be focused on programming, not slowed down by superficial dif
 * autocutsel (this will auto install)
 
 ## Features
-* OSX/Lisp style keymaps
+* OSX/Lisp style keymaps (for the keys on the left, the keys on the right are not affected atm)
 * OSX shortcuts for screenshot, while also retaining Ctrl-C termination behavior in bash
 * OSX like auto copy for selected content in gnome-terminal
 
