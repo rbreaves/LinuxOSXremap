@@ -22,10 +22,7 @@ fi
 
 # Add Ctrl-C termination behavior via shortcut for Super-C
 python3 shortcuts.py 'Control C' 'xte "keydown Control_L" "key x" "keyup Control_L" "keydown Control_L" "key c" "keyup Control_L"' '<Super>C'
+# Added screen region screenshot shortcut that matches OSX
+python3 shortcuts.py 'Take a screenshot of area' 'gnome-screenshot -a' '<Shift><Ctrl>4'
 
 read -p 'The script has installed OSX keymaps, and the autocopy python script. Press any key to finish...'
-
-
-# Automate the keyboard shortcuts needed in Ubuntu
-# file shortcuts.py
-#python3 shortcuts.py 'Take a screenshot of area' 'gnome-screenshot -a' '<Shift><Ctrl>$'
