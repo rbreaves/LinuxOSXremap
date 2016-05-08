@@ -20,10 +20,12 @@ if [ `fgrep -x -f ~/.bashrc .bashrc | wc -l` -ne 7 ]; then
 	cat "$newbashrc" >> "$bashrc"
 fi
 
+# Add Ctrl-C termination behavior via shortcut for Super-C
+python3 shortcuts.py 'Control C' 'xte "keydown Control_L" "key x" "keyup Control_L" "keydown Control_L" "key c" "keyup Control_L"' '<Super>C'
+
 read -p 'The script has installed OSX keymaps, and the autocopy python script. Press any key to finish...'
 
 
 # Automate the keyboard shortcuts needed in Ubuntu
 # file shortcuts.py
-# python3 shortcuts.py 'Take a screenshot of area' 'gnome-screenshot -a' '<Shift><Ctrl>$'
-# python3 shortcuts.py 'Control C' "xte 'keydown Control_L' 'key x' 'keyup Control_L' 'keydown Control_L' 'key c' 'keyup Control_L'" '<Super>C'
+#python3 shortcuts.py 'Take a screenshot of area' 'gnome-screenshot -a' '<Shift><Ctrl>$'
