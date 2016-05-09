@@ -57,7 +57,7 @@ fi
 
 # Added screen region screenshot shortcut that matches OSX
 if [[ ! `grep 'Take a screenshot of area' ~/.config/dconf/keybindings` ]]; then
-	python3 shortcuts.py 'Take a screenshot of area' 'gnome-screenshot -a' '<Shift><Ctrl>4'
+	python3 shortcuts.py 'Take a screenshot of area' 'gnome-screenshot -a' '<Primary><Shift>dollar'
 fi
 
 if [ "$rebootnow" = true ]; then
