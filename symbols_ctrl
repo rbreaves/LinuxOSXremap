@@ -1,0 +1,8 @@
+// swap right alt and right ctrl  
+partial modifier_keys  
+xkb_symbols "swap_ralt_rctrl" {  
+    key <RALT> { [ Control_R, Control_R ] };  
+    key <RCTL> { [ Alt_R, Meta_R ] };  
+    modifier_map Control { <RALT>, <LCTL> };  
+    modifier_map Mod1 { <RCTL> };  
+};
