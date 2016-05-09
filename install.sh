@@ -17,23 +17,24 @@ if ! which autocutsel > /dev/null; then
 fi
 
 # Add right alt and ctrl swap
-if [[ ! `grep 'swap_ralt_rctrl' /usr/share/X11/xkb/symbols/ctrl` ]]; then
-	sudo cat ./symbols_ctrl | sudo tee --append /usr/share/X11/xkb/symbols/ctrl > /dev/null
-	rebootnow=true
-fi
+# if [[ ! `grep 'swap_ralt_rctrl' /usr/share/X11/xkb/symbols/ctrl` ]]; then
+# 	sudo cat ./symbols_ctrl | sudo tee --append /usr/share/X11/xkb/symbols/ctrl > /dev/null
+# 	rebootnow=true
+# fi
 
-if [[ ! `grep 'swap_ralt_rctrl' /usr/share/X11/xkb/rules/evdev` ]]; then
-	echo 'ctrl:swap_ralt_rctrl = +ctrl(swap_ralt_rctrl)' | sudo tee --append /usr/share/X11/xkb/rules/evdev > /dev/null
-	rebootnow=true
-fi
+# if [[ ! `grep 'swap_ralt_rctrl' /usr/share/X11/xkb/rules/evdev` ]]; then
+# 	echo 'ctrl:swap_ralt_rctrl = +ctrl(swap_ralt_rctrl)' | sudo tee --append /usr/share/X11/xkb/rules/evdev > /dev/null
+# 	rebootnow=true
+# fi
 
-if [[ ! `grep 'swap_ralt_rctrl' /usr/share/X11/xkb/rules/evdev.lst` ]]; then
-	echo 'ctrl:swap_ralt_rctrl Swap right Ctrl and Alt' | sudo tee --append /usr/share/X11/xkb/rules/evdev.lst > /dev/null
-	rebootnow=true
-fi
+# if [[ ! `grep 'swap_ralt_rctrl' /usr/share/X11/xkb/rules/evdev.lst` ]]; then
+# 	echo 'ctrl:swap_ralt_rctrl Swap right Ctrl and Alt' | sudo tee --append /usr/share/X11/xkb/rules/evdev.lst > /dev/null
+# 	rebootnow=true
+# fi
 
 #Swapping Alt, Win and Ctrl keys to align with OSX - but the Ctrl key will act as the Super (Win) key
-gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swap_lalt_lctl_lwin', 'altwin: swap_alt_win', 'ctrl:swap_ralt_rctrl']"
+gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swap_lalt_lctl_lwin']"
+# gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swap_lalt_lctl_lwin', 'altwin: swap_alt_win', 'ctrl:swap_ralt_rctrl']"
 
 #Adding python script to enable autocopy on gnome-terminal
 cp autocopy.py ~/.autocopy.py
@@ -51,7 +52,7 @@ dconf dump /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ >~/
 
 # Add Ctrl-C termination behavior via shortcut for Super-C
 if [[ ! `grep 'Control C' ~/.config/dconf/keybindings` ]]; then
-	python3 shortcuts.py 'Control C' 'xte "keydown Control_L" "key x" "keyup Control_L" "keydown Control_L" "key c" "keyup Control_L"' '<Super>C'
+	python3 shortcuts.py 'Control C' 'xte "keydown Control_L" "key x" "keyup Control_L" "keydown Control_L" "key c" "keyup Control_L"' '<Super>c'
 fi
 
 # Added screen region screenshot shortcut that matches OSX
