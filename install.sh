@@ -33,8 +33,7 @@ if [[ ! `grep 'swap_ralt_rctrl' /usr/share/X11/xkb/rules/evdev.lst` ]]; then
 fi
 
 #Swapping Alt, Win and Ctrl keys to align with OSX - but the Ctrl key will act as the Super (Win) key
-gsettings set org.gnome.desktop.input-sources xkb-options "['altwin:ctrl_win', 'ctrl:swap_lalt_lctl_lwin']"
-# 'ctrl:swap_ralt_rctrl'
+gsettings set org.gnome.desktop.input-sources xkb-options "['altwin:ctrl_win', 'ctrl:swap_lalt_lctl_lwin', 'ctrl:swap_ralt_rctrl']"
 
 #Adding python script to enable autocopy on gnome-terminal
 cp autocopy.py ~/.autocopy.py
