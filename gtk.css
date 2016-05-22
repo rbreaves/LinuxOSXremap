@@ -1,0 +1,31 @@
+@define-color bg-grey #222;
+@define-color active #313131;
+
+TerminalWindow .notebook {
+    border: 0;
+    padding: 0;
+    color: #fff;
+    background-color: shade(@active, 1);
+}
+
+TerminalWindow .notebook tab:active {
+    background-color: shade(@active,1);
+}
+
+TerminalWindow .notebook tab {
+    border-radius: 0px;
+    padding: 3px;
+    background-color: shade(@bg-grey, 1);
+}
+
+TerminalWindow .notebook tab .button,
+TerminalWindow .notebook tab .button:active,
+TerminalWindow .notebook tab .button:hover {
+    color: @backdrop_text;
+    border: none;
+    background-image: none;
+    background: none;
+    border-radius: 16px;
+    padding: 0;
+    box-shadow: none;
+}
