@@ -1,5 +1,8 @@
 # LinuxOSXremap
 
+## No Longer In Active Development
+
+I have found a new way of accomplishing these goes with practically none of this effort. The Konsole editor made by the folks at KDE pretty well supports what I accomplished via scripting for the gnome-terminal, but with none of the overhead of the python scripting. I would strongly recommend users to look into using Konsole, the keymap file however may still be useful for correcting keymap issues, but it can also vary between devices and distros, so mileage will always vary on that.
 ## The Mission
 
 Programmers should be focused on programming, not slowed down by superficial differences in an OS.
